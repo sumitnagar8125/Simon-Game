@@ -6,7 +6,7 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin: 5%;
   color: #FEF2BF;
 }
 
@@ -14,7 +14,6 @@ body {
   display: block;
   width: 50%;
   margin: auto;
-
 }
 
 .btn {
@@ -50,4 +49,32 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+/* Start Button Styling */
+.start-btn {
+  background-color: #28a745; /* Green background */
+  border: solid black; /* Remove border */
+  color: white; /* White text */
+  padding: 15px 32px; /* Some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the container inline-block */
+  font-size: 16px; /* Increase font size */
+  margin: 20px auto; /* Some margin */
+  cursor: pointer; /* Pointer/hand icon on hover */
+  border-radius: 15px; /* Rounded corners */
+  font-family: 'Press Start 2P', cursive; /* Matching font */
+  box-shadow: 0 3px #999; /* Add shadows */
+  border-width: 7px;
+}
+
+.start-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.start-btn:active {
+  background-color: #3e8e41; /* Even darker green on click */
+  box-shadow: 0 2px #666; /* Reduce shadow */
+  transform: translateY(2px); /* Push down a bit */
 }
