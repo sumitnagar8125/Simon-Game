@@ -1,4 +1,3 @@
-
 var buttonColours = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];
@@ -7,11 +6,12 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
+$("#start-button").click(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
+    $("#start-button").hide(); // Hide the start button after the game starts
   }
 });
 
@@ -37,7 +37,7 @@ function checkAnswer(currentLevel) {
     } else {
       playSound("wrong");
       $("body").addClass("game-over");
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over, Press Start Button to Restart");
 
       setTimeout(function () {
         $("body").removeClass("game-over");
@@ -76,4 +76,5 @@ function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
+  $("#start-button").show(); // Show the start button when the game restarts
 }
